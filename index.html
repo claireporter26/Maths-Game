@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./filestore/images/svg/favicon.svg">
+    <title>Maths Game</title>   
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./filestore/css/style.css">
+
+</head>
+<body>
+  <div id="main-container">
+   <section id="header-section">
+    <header>
+        <div id="pageTitle">
+            <h1>Practice your Maths</h1>
+        </div>
+        <nav>
+
+        </nav>
+    </header>
+    <section id="instructionsDiv"><h3>Welcome to this awesome maths game! Below you will find maths equations to solve, click the correct answer to win a point. The equations will get harder as you progress through each level.</br></br>GOOD LUCK!!</h3>
+    </section>
+    </section>
+    <section id="playerStatsDiv">
+        <div id="levelStats">Level: <span id="playerLevel"></span></div>
+        <div id="score">Score: <span id="playerScore">20</span></div>
+    </section>
+    <section id="equationDiv">
+        <p><span id="numx">2</span> <span id="operator"></span> <span id="numy">2</span> = <span id="numz">4</span></p>
+    </section>
+    <section id="answersDiv">
+        <ul id="answerList">
+            <li class="answer-option">
+                <button class="answerButton" id="answer-option-0"></button>
+            </li>
+            <li class="answer-option">
+                <button class="answerButton" id="answer-option-1"></button>
+            </li>
+            <li class="answer-option">
+                <button class="answerButton" id="answer-option-2"></button>
+            </li>
+            <li class="answer-option">
+                <button class="answerButton" id="answer-option-3"></button>
+            </li>
+        </ul>
+    </section>
+  </div>
+  <script src="./filestore/js/main.js"></script>
+</body>
+</html>

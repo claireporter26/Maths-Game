@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+main-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    max-width: 500px;  
+}
+
+section{
+    margin: 2rem;
+    padding: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 4rem;
+    font-weight: 200;
+}
