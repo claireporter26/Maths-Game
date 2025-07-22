@@ -155,7 +155,7 @@ function setNewEquation(){
     //reset values
     tryCount = 0;
     $('#equationDiv').css('color', 'inherit');
-    $('.answerButton').css('background-color', 'inherit');
+    $('.answerButton').css('background-color', '#3a86ff');
     z = 0;
     //answerOptions = [];
     setEquation();
