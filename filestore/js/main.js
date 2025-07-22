@@ -186,7 +186,7 @@ $('.answerButton').on('click', function(e){
 })
 
 setEquation();
-setOptionBtns();
+//setOptionBtns();
 //randomiseAnswerOptions();
 
 

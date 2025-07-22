@@ -1,83 +1,322 @@
+/* Import a playful, readable Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Nunito:wght@700&display=swap');
+
+:root {
+  --primary: #ffbe0b;
+  --secondary: #3a86ff;
+  --accent: #ff006e;
+  --bg: #f1f1f1;
+  --white: #fff;
+  --success: #06d6a0;
+  --danger: #ef476f;
+  --focus: #ffd60a;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  font-family: 'Baloo 2', 'Nunito', Arial, sans-serif;
+  color: #222;
+}
+
+/* #main-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: var(--white);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(58,134,255,0.15);
+  padding: 32px 24px;
+  position: relative;
+  overflow: hidden;
+  /* Removed background SVG */
+
+
+#main-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: var(--white);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(58,134,255,0.15);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (min-width: 900px) {
+  #main-container {
+    flex-direction: row;
+    min-height: 600px;
+    padding: 0;
+  }
+}
+
+/* Fun maths SVG background */
+/* #main-container::before {
+  content: "";
+  position: absolute;
+  top: -40px; left: -40px; right: -40px; bottom: -40px;
+  background: url('data:image/svg+xml;utf8,<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg"><text x="20" y="60" font-size="48" fill="%23ffbe0b" font-family="Baloo 2">+</text><text x="120" y="120" font-size="48" fill="%233a86ff" font-family="Baloo 2">×</text><text x="220" y="200" font-size="48" fill="%23ff006e" font-family="Baloo 2">÷</text><text x="320" y="80" font-size="48" fill="%2306d6a0" font-family="Baloo 2">=</text></svg>');
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+} */
+
+/* Header section: left column on desktop, full width on mobile */
+#header-section {
+  background: var(--secondary);
+  color: var(--white);
+  border-radius: 24px 0 0 24px;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 320px;
+  max-width: 400px;
+  flex: 1 1 340px;
+}
+
+@media (max-width: 899px) {
+  #header-section {
+    border-radius: 24px 24px 5px 5px;
+    min-width: unset;
+    max-width: 100%;
+    padding: 24px 12px 18px 12px;
+  }
+}
+
+/* header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 24px;
+
+} */
+
 header {
-  margin: 1rem;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  background: none;
+  color: var(--white);
+  border-radius: 0;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
+/* #pageTitle h1 {
+  font-size: 2.8rem;
+  color: var(--white);
+
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 5px 10px;
+  text-align: center;
+  font-family: 'Baloo 2', 'Nunito', Arial, sans-serif;
+
+} */
+
+#pageTitle h1 {
+  font-size: 2.8rem;
+  color: var(--white);
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 5px 10px;
+  text-align: center;
+  font-family: 'Baloo 2', 'Nunito', Arial, sans-serif;
+}
+
+/* Logo style (SVG math icon) */
+/* #pageTitle::before {
+  content: '';
+  display: inline-block;
+  width: 40px; height: 40px;
+  background: url('../images/svg/favicon.svg') center/contain no-repeat;
+  vertical-align: middle;
+  margin-right: 8px;
+} */
+
+/* Content section: right column on desktop, full width on mobile */
+#content-sections {
+  flex: 2 1 500px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 1rem;
-  padding: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 24px;
 }
 
-section {
-  margin: 2rem;
-  padding: 1rem;
+@media (max-width: 899px) {
+  #content-sections {
+    padding: 24px 8px;
+  }
 }
 
-li {
-  list-style: none;
+/* Instructions: no background, blue text */
+/* #instructionsDiv h3 {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0 0 18px 0;
+  font-weight: 600;
+  text-align: center;
+} */
+
+/* Instructions: no background, blue text */
+#instructionsDiv h3 {
+  font-size: 1.1rem;
+  color: var(--white);
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0 0 18px 0;
+  font-weight: 600;
+  text-align: center;
 }
 
-button {
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 4rem;
-  font-weight: 200;
-}
-
-#instructionsDiv {
-  font-size: 2rem;
+@media (max-width: 899px) {
+  #instructionsDiv{
+    color: var(--secondary);
+    margin: 5px 10px;
+    padding: 20px;
+  }
 }
 
 #playerStatsDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 2rem;
+  justify-content: space-between;
+  margin: 18px 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#levelStats, #score {
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(255,190,11,0.08);
+  text-transform: uppercase;
 }
 
 #equationDiv {
-  font-size: 6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+  margin: 24px 0 18px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  letter-spacing: 2px;
+  background: #e7f0ff;
+  border-radius: 16px;
+  padding: 18px 0;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.06);
+}
+
+#answersDiv {
+  margin-top: 10px;
 }
 
 #answerList {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  list-style: none;
+  padding: 0;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
-#answerList .button {
+.answer-option {
+  flex: 1 1 40%;
   min-width: 120px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.answerButton {
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  background: var(--secondary);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(58,134,255,0.10);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+}
+
+.answerButton:focus {
+  outline: 3px solid var(--focus);
+  background: var(--accent);
+}
+
+.answerButton:hover, .answerButton:active {
+  background: var(--accent);
+  color: var(--white);
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 8px 24px rgba(255,0,110,0.13);
+}
+
+@media (max-width: 600px) {
+  #main-container {
+    padding: 12px 2vw;
+    border-radius: 18px;
+  }
+  #pageTitle h1 {
+    font-size: 1.3rem;
+  }
+  #equationDiv {
+    font-size: 1.3rem;
+    padding: 10px 0;
+  }
+  .answerButton {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
+
+/* Accessibility: high contrast for focus, readable font sizes, no color-only cues */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 600px) {
+  #main-container {
+    flex-direction: column;
+    padding: 0;
+    border-radius: 18px;
+  }
+  #header-section {
+    border-radius: 18px 18px 0 0;
+    padding: 18px 4vw 10px 4vw;
+  }
+  #content-sections {
+    padding: 12px 2vw;
+  }
+  #pageTitle h1 {
+    font-size: 1.8rem;
+  }
+  #equationDiv {
+    font-size: 1.3rem;
+    padding: 10px 0;
+  }
+  .answerButton {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
