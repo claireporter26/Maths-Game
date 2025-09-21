@@ -7,7 +7,7 @@
   --accent: #ff006e;
   --bg: #f1f1f1;
   --white: #fff;
-  --success: #06d6a0;
+  --success: #1ab28a;
   --danger: #ef476f;
   --focus: #ffd60a;
 }
@@ -35,9 +35,7 @@ html, body {
 
 #main-container {
   max-width: 1100px;
-  margin: 40px auto;
   background: var(--white);
-  border-radius: 32px;
   box-shadow: 0 8px 32px rgba(58,134,255,0.15);
   padding: 0;
   position: relative;
@@ -47,13 +45,7 @@ html, body {
   gap: 0;
 }
 
-@media (min-width: 900px) {
-  #main-container {
-    flex-direction: row;
-    min-height: 600px;
-    padding: 0;
-  }
-}
+
 
 /* Fun maths SVG background */
 /* #main-container::before {
@@ -70,7 +62,6 @@ html, body {
 #header-section {
   background: var(--secondary);
   color: var(--white);
-  border-radius: 24px 0 0 24px;
   padding: 32px 24px 24px 24px;
   display: flex;
   flex-direction: column;
@@ -83,7 +74,6 @@ html, body {
 
 @media (max-width: 899px) {
   #header-section {
-    border-radius: 24px 24px 5px 5px;
     min-width: unset;
     max-width: 100%;
     padding: 24px 12px 18px 12px;
@@ -155,11 +145,31 @@ header {
   padding: 32px 24px;
 }
 
+#content-sections p {
+  
+  font-size: 1rem;
+  font-weight: 600; 
+  text-transform: uppercase;
+}
+
+#basicInstruction {
+  margin-bottom: 0;
+  margin-top: 2.5em;
+}
+
+#content-sections #answerTag {
+color: var(--success);
+text-align: center;
+font-size: 2rem;
+}
+
+
+/* 
 @media (max-width: 899px) {
   #content-sections {
     padding: 24px 8px;
   }
-}
+} */
 
 /* Instructions: no background, blue text */
 /* #instructionsDiv h3 {
@@ -213,7 +223,7 @@ header {
 #equationDiv {
   text-align: center;
   margin: 24px 0 18px 0;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: 700;
   color: var(--secondary);
   letter-spacing: 2px;
@@ -221,6 +231,10 @@ header {
   border-radius: 16px;
   padding: 18px 0;
   box-shadow: 0 2px 8px rgba(58,134,255,0.06);
+}
+
+#equationDiv p {
+  font-size: 3rem;
 }
 
 #answersDiv {
@@ -239,12 +253,14 @@ header {
 .answer-option {
   flex: 1 1 40%;
   min-width: 120px;
+
 }
 
 .answerButton {
   width: 100%;
   padding: 18px 0;
-  font-size: 1.3rem;
+  
+  font-size: 2rem;
   font-family: inherit;
   font-weight: 700;
   border: none;
@@ -270,10 +286,9 @@ header {
   box-shadow: 0 8px 24px rgba(255,0,110,0.13);
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   #main-container {
     padding: 12px 2vw;
-    border-radius: 18px;
   }
   #pageTitle h1 {
     font-size: 1.3rem;
@@ -286,7 +301,7 @@ header {
     font-size: 1rem;
     padding: 12px 0;
   }
-}
+} */
 
 /* Accessibility: high contrast for focus, readable font sizes, no color-only cues */
 :focus-visible {
@@ -294,15 +309,32 @@ header {
   outline-offset: 2px;
 }
 
+@media (min-width: 900px) {
+  #main-container {
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    min-height: 600px;
+  }
+
+  #content-sections, #header-section {
+    justify-content: center;
+    padding: 0em 2em 5em 2em;;
+    height: 100%;
+  }
+
+}
+
 /* Responsive tweaks for mobile */
 @media (max-width: 600px) {
+
+
   #main-container {
     flex-direction: column;
     padding: 0;
-    border-radius: 18px;
   }
   #header-section {
-    border-radius: 18px 18px 0 0;
     padding: 18px 4vw 10px 4vw;
   }
   #content-sections {
@@ -316,7 +348,7 @@ header {
     padding: 10px 0;
   }
   .answerButton {
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 12px 0;
   }
 }
